@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.548);
+  z-index: 10;
+}
+
+#inicio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: linear-gradient(
+      rgba(255, 254, 254, 0.397),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(img/background-inicio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-acesso {
+  display: none;
+}
+
+li a:hover,
+li a:focus {
+  background-color: black;
+  color: white;
+}
+
+#sobre_mim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0 15%;
+  background-image: linear-gradient(
+      rgba(255, 254, 254, 0.397),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(img/background-sobre-mim.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 5px solid black;
+}
+
+#projectos {
+  padding: 10rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+  background-image: linear-gradient(
+      rgba(255, 254, 254, 0.397),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(img/background-projects.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projectos-titulo {
+  margin-bottom: 4rem;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inner-container {
+  display: flex;
+  height: 225px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.541);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.links a:hover,
+link a:focus {
+  transform: scale(1.2);
+}
+.inner-container:hover {
+  transform: rotate(-180deg);
+}
+
+#contactos {
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: linear-gradient(
+      rgba(255, 254, 254, 0.397),
+      rgba(0, 0, 0, 0.658)
+    ),
+    url(img/background-contactos.jpg);
+  background-size: cover;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.projectos-vazio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+footer {
+  background-color: white;
+  color: black;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.animatecss {
+  animation: slidecss 5s infinite linear alternate-reverse;
+}
+.animatehtml {
+  animation: slidehtml 5s infinite linear alternate-reverse;
+}
+
+@keyframes slidecss {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-200px) rotate(360deg);
+  }
+  66% {
+    transform: translateX(200px) rotate(360deg);
+  }
+}
+@keyframes slidehtml {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(200px) rotate(360deg);
+  }
+  66% {
+    transform: translateX(-200px) rotate(360deg);
+  }
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 950px) {
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  @keyframes slidecss {
+    0% {
+      transform: translateX(0);
+    }
+
+    33% {
+      transform: translateX(-150px) rotate(360deg);
+    }
+    66% {
+      transform: translateX(150px) rotate(360deg);
+    }
+  }
+  @keyframes slidehtml {
+    0% {
+      transform: translateX(0);
+    }
+
+    33% {
+      transform: translateX(150px) rotate(360deg);
+    }
+    66% {
+      transform: translateX(-150px) rotate(360deg);
+    }
+  }
+
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1rem;
+    font-weight: 450;
+  }
+  footer p {
+    font-size: 0.75rem;
+  }
+  .inner-container {
+    width: 100px;
+    height: 75px;
+  }
+  .container {
+    justify-content: center;
+    gap: 2rem;
+  }
+  .links {
+    padding: 20px;
+  }
+
+  #projectos {
+    background-position: left;
+  }
+
+  .label-menu-acesso::after {
+    content: "≡";
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background-color: rgba(255, 255, 255, 0.548);
+    color: black;
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: block;
+    position: fixed;
+    top: -100vh;
+    transition: ease 0.3s;
+  }
+  .menu-acesso:checked ~ .navbar {
+    top: 0;
+  }
+
+  .menu-acesso:checked ~ .label-menu-acesso::after {
+    display: block;
+    content: "✕";
+  }
+  .navbar {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(12px);
+  }
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-list li {
+    border-bottom: 1px solid white;
+    width: 80%;
+    text-align: center;
+    font-weight: 800;
+  }
+}
